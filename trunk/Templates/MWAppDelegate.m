@@ -8,6 +8,8 @@
 
 #import "MWAppDelegate.h"
 
+#import "GAI.h"
+
 #import "UIColor+MW.h"
 #import "MWConstants.h"
 #import "MWDataSingleton.h"
@@ -28,6 +30,8 @@
     {
         Log(@"NSZombieEnabled/NSAutoreleaseFreedObjectCheckEnabled enabled!");
     }
+    
+    [self initGoogleAnalytics];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
@@ -100,6 +104,23 @@
      forState:UIControlStateSelected barMetrics:UIBarMetricsDefault];
     
     [[UIBarButtonItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIFont fontWithName:@"NeoSansIntel" size:13], UITextAttributeFont,[UIColor colorWithHex: 0xffffff],UITextAttributeTextColor,nil] forState:UIControlStateNormal];
+}
+
+#pragma mark - GoogleAnalytics
+
+-(void)initGoogleAnalytics
+{
+    // Optional: automatically send uncaught exceptions to Google Analytics.
+    [GAI sharedInstance].trackUncaughtExceptions = YES;
+    
+    // Optional: set Google Analytics dispatch interval to e.g. 20 seconds.
+    [GAI sharedInstance].dispatchInterval = 20;
+    
+    // Optional: set debug to YES for extra debugging information.
+    [GAI sharedInstance].debug = NO;
+    
+    // Create tracker instance.
+    id<GAITracker> tracker = [[GAI sharedInstance] trackerWithTrackingId:@"UA-YOUR-TRACKING-ID"];
 }
 
 @end

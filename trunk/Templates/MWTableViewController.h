@@ -7,14 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+
 #import "ODRefreshControl.h"
+#import "GAITrackedViewController.h"
 
 #import "MWConstants.h"
 #import "MWDataSingleton.h"
 
 #import "MWCustomCell.h"
 
-@interface MWTableViewController : UIViewController
+@interface MWTableViewController : GAITrackedViewController
 <UITableViewDataSource, UITableViewDelegate, MWCustomCellDelegate>
 {
     NSMutableArray* _dataSource;

@@ -19,6 +19,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.trackedViewName = @"LeftView";
 	
     _type = TemplateControllerTypeTable;
 }
@@ -40,6 +42,11 @@
         [self.sidePanelController showCenterPanelAnimated:YES];
         
     }
+    
+    [[[GAI sharedInstance] defaultTracker] sendEventWithCategory:@"uiAction"
+                                                      withAction:@"buttonPress"
+                                                       withLabel:@"leftView/tableBtn"
+                                                       withValue:[NSNumber numberWithInt:100]];
 }
 
 - (IBAction)didPressLove:(id)sender
@@ -55,6 +62,11 @@
         [self.sidePanelController showCenterPanelAnimated:YES];
         
     }
+    
+    [[[GAI sharedInstance] defaultTracker] sendEventWithCategory:@"uiAction"
+                                                      withAction:@"buttonPress"
+                                                       withLabel:@"leftView/loveBtn"
+                                                       withValue:[NSNumber numberWithInt:100]];
 }
 
 #pragma mark - fin

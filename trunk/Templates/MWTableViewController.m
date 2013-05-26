@@ -27,6 +27,8 @@
 {
     [super viewDidLoad];
     
+    self.trackedViewName = @"TableView";
+    
     [self loadNavigationBar];
     [self initRefreshControl];
     

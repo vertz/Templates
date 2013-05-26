@@ -11,6 +11,9 @@
 #import <UIKit/UIKit.h>
 #import <QuartzCore/QuartzCore.h>
 
+#import "GAI.h"
+#import "GAITrackedViewController.h"
+
 #import "JASidePanelController.h"
 #import "UIViewController+JASidePanel.h"
 
@@ -21,7 +24,7 @@
 
 # import "MWSpreadTheLoveViewController.h"
 
-@interface MWLeftViewController : UIViewController
+@interface MWLeftViewController : GAITrackedViewController
 {
     TemplateControllerType _type;
 }

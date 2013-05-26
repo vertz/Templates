@@ -29,6 +29,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.trackedViewName = @"SpreadTheLove";
         
    _tableView.delegate = self;
     _tableView.dataSource = self;

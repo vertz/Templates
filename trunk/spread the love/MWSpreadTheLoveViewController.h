@@ -11,7 +11,9 @@
 #import <MessageUI/MFMailComposeViewController.h>
 #import <MessageUI/MFMessageComposeViewController.h>
 
-@interface MWSpreadTheLoveViewController : UIViewController
+#import "GAITrackedViewController.h"
+
+@interface MWSpreadTheLoveViewController : GAITrackedViewController
 <UITableViewDataSource, UITableViewDelegate, MFMailComposeViewControllerDelegate, MFMessageComposeViewControllerDelegate>
 {
     
