@@ -153,6 +153,14 @@
 		C92B5E351752BF9C00145818 /* GAITracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITracker.h; sourceTree = "<group>"; };
 		C92B5E361752BF9C00145818 /* GAITransaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITransaction.h; sourceTree = "<group>"; };
 		C92B5E371752BF9C00145818 /* GAITransactionItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITransactionItem.h; sourceTree = "<group>"; };
+		C92B5E3A1753444100145818 /* MWConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWConstants.h; sourceTree = "<group>"; };
+		C92B5E3B1753444100145818 /* MWConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWConstants.m; sourceTree = "<group>"; };
+		C92B5E3C1753444100145818 /* MWSimilarUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWSimilarUser.h; sourceTree = "<group>"; };
+		C92B5E3D1753444100145818 /* MWSimilarUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWSimilarUser.m; sourceTree = "<group>"; };
+		C92B5E3E1753444100145818 /* MWUserDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWUserDetail.h; sourceTree = "<group>"; };
+		C92B5E3F1753444100145818 /* MWUserDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWUserDetail.m; sourceTree = "<group>"; };
+		C92B5E401753444100145818 /* MWUserTeam.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWUserTeam.h; sourceTree = "<group>"; };
+		C92B5E411753444100145818 /* MWUserTeam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWUserTeam.m; sourceTree = "<group>"; };
 		C958C4AE174C19DD002D95E0 /* batman.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = batman.jpg; sourceTree = "<group>"; };
 		C958C4AF174C19DD002D95E0 /* flash.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = flash.jpg; sourceTree = "<group>"; };
 		C958C4B0174C19DD002D95E0 /* hulk.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = hulk.jpg; sourceTree = "<group>"; };
@@ -395,6 +403,29 @@
 			path = GoogleAnalyticsiOS_2.0beta4;
 			sourceTree = "<group>";
 		};
+		C92B5E381753431200145818 /* vubooo user class hierarchy */ = {
+			isa = PBXGroup;
+			children = (
+				C92B5E391753444100145818 /* vubooo user */,
+			);
+			name = "vubooo user class hierarchy";
+			sourceTree = "<group>";
+		};
+		C92B5E391753444100145818 /* vubooo user */ = {
+			isa = PBXGroup;
+			children = (
+				C92B5E3A1753444100145818 /* MWConstants.h */,
+				C92B5E3B1753444100145818 /* MWConstants.m */,
+				C92B5E3C1753444100145818 /* MWSimilarUser.h */,
+				C92B5E3D1753444100145818 /* MWSimilarUser.m */,
+				C92B5E3E1753444100145818 /* MWUserDetail.h */,
+				C92B5E3F1753444100145818 /* MWUserDetail.m */,
+				C92B5E401753444100145818 /* MWUserTeam.h */,
+				C92B5E411753444100145818 /* MWUserTeam.m */,
+			);
+			path = "vubooo user";
+			sourceTree = "<group>";
+		};
 		C958C4AD174C19DD002D95E0 /* comic */ = {
 			isa = PBXGroup;
 			children = (
@@ -412,6 +443,7 @@
 		C958C501174C1F08002D95E0 /* data */ = {
 			isa = PBXGroup;
 			children = (
+				C92B5E381753431200145818 /* vubooo user class hierarchy */,
 				C958C502174C1F2F002D95E0 /* MWDataSingleton.h */,
 				C958C503174C1F2F002D95E0 /* MWDataSingleton.m */,
 				C92B5E2D1752BAE800145818 /* MWUserData.h */,
