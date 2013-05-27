@@ -6,9 +6,9 @@
 //  Copyright (c) 2012 vertz. All rights reserved.
 //
 
-#import "MWConstants.h"
+#import "MWVuboooConstants.h"
 
-@implementation MWConstants
+@implementation MWVuboooConstants
 
 //Registration
 NSString *const MWRegisterationUrl = @"/register";

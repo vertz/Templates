@@ -6,6 +6,20 @@
 //  Copyright (c) 2012 vertz. All rights reserved.
 //
 
+/*
+ 
+ ################# this is vubooo MWVuboooConstants class ###############################
+ ########################################################################################
+ 
+ I add this to the project just in case any of vubooo user classs uses enums frome here
+ 
+ 
+ ########################################################################################
+ ########################################################################################
+ ########################################################################################
+ */
+
+
 #import <Foundation/Foundation.h>
 
 #define CarouselItemsInFrame 5.f
@@ -167,7 +181,7 @@ typedef enum {
 
 
 
-@interface MWConstants : NSObject
+@interface MWVuboooConstants : NSObject
 
 extern NSString *const MWPort;
 extern NSString *const MWHost;

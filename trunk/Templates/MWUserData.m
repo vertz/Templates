@@ -53,6 +53,9 @@ static MWUserData* _instance = nil;
 {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
+    NSData *myEncodedObject = [NSKeyedArchiver archivedDataWithRootObject:_dataArray];
+    [defaults setObject:myEncodedObject forKey:KUserDataArrayKey];
+    
     [defaults setInteger:_age forKey:KUserDataAgeKey];
     [defaults setObject:_name forKey:KUserDataNameKey];
     
@@ -65,12 +68,33 @@ static MWUserData* _instance = nil;
     
     _age =  [defaults integerForKey:KUserDataAgeKey];
     _name = [defaults objectForKey:KUserDataNameKey];
+    
+    NSData *myEncodedObject = [defaults objectForKey:KUserDataArrayKey];
+    if (myEncodedObject != nil)
+    {
+        NSArray *oldSavedArray = [NSKeyedUnarchiver unarchiveObjectWithData:myEncodedObject];
+        if (oldSavedArray != nil){
+            _dataArray = [[NSMutableArray alloc] initWithArray:oldSavedArray];
+        }
+        else{
+            _dataArray = [[NSMutableArray alloc] init];
+        }
+    }
+    else
+    {
+        LogError(@"couldn't load _dataArray");
+        _dataArray = [[NSMutableArray alloc] init];
+    }
 }
 
 #pragma mark - NSCoding
 
 -(void)encodeWithCoder:(NSCoder *)encoder
 {
+    char* c = "@";
+    [encoder encodeInteger:[_dataArray count] forKey:KUserDataArrayCountKey];
+    [encoder encodeArrayOfObjCType:c count:[_dataArray count] at:&_dataArray];
+    
     [encoder encodeInteger:_age forKey:KUserDataAgeKey];
     [encoder encodeObject:_name forKey:KUserDataNameKey];
 }
@@ -81,6 +105,14 @@ static MWUserData* _instance = nil;
     
 	if(self)
     {
+        char* c = "@";
+        if(_dataArray == nil)
+        {
+            _dataArray = [[NSMutableArray alloc] init];
+        }
+        NSInteger count = [encoder decodeIntForKey:KUserDataArrayCountKey];
+        [encoder decodeArrayOfObjCType:c count:count at:&_dataArray];
+        
         _age =  [encoder decodeIntegerForKey:KUserDataAgeKey];
         _name = [encoder decodeObjectForKey:KUserDataNameKey];
 	}

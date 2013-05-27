@@ -34,10 +34,14 @@
     
     _dataSource = [[NSMutableArray alloc] init];
     
-    for(NSInteger i = 0 ; i < 5 ; ++i)
+    if([[MWDataSingleton sharedInstance] count] < 1)
     {
-        NSString* str = [[NSString alloc]initWithFormat:@"this is the - %.2d row",i];
-        [_dataSource addObject: str];
+        [[MWDataSingleton sharedInstance] initData];
+    }
+    
+    for(NSInteger i = 0 ; i < [[MWDataSingleton sharedInstance] count] ; ++i)
+    {
+        [_dataSource addObject: [[MWDataSingleton sharedInstance] objectAtIndex:i]];
     }
 }
 
@@ -86,7 +90,7 @@
     
     if(row < [_dataSource count])
     {
-        NSDictionary* dict = [[MWDataSingleton sharedInstance] objectAtIndex:row];
+        NSDictionary* dict = [_dataSource objectAtIndex:row];
         if(dict != nil)
         {
             [cell prepareForUse:_isEditing

@@ -8,12 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
-#define KUserDataAgeKey       @"KUserDataAgeKey"
-#define KUserDataNameKey      @"KUserDataNameKey"
+#define KUserDataAgeKey             @"KUserDataAgeKey"
+#define KUserDataNameKey            @"KUserDataNameKey"
+#define KUserDataArrayCountKey      @"KUserDataArrayCountKey"
+#define KUserDataArrayKey           @"KUserDataArrayKey"
 
 @interface MWUserData : NSObject <NSCoding>
 {
-    
+    NSMutableArray* _dataArray;
 }
 
 @property (nonatomic, assign) NSInteger age;

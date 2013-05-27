@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "MWUserTeam.h"
 #import "MWSimilarUser.h"
-#import "MWConstants.h"
+#import "MWVuboooConstants.h"
 
 #define kUserNameKey @"name"
 #define kUserIdKey @"id"

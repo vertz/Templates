@@ -153,8 +153,8 @@
 		C92B5E351752BF9C00145818 /* GAITracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITracker.h; sourceTree = "<group>"; };
 		C92B5E361752BF9C00145818 /* GAITransaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITransaction.h; sourceTree = "<group>"; };
 		C92B5E371752BF9C00145818 /* GAITransactionItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITransactionItem.h; sourceTree = "<group>"; };
-		C92B5E3A1753444100145818 /* MWConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWConstants.h; sourceTree = "<group>"; };
-		C92B5E3B1753444100145818 /* MWConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWConstants.m; sourceTree = "<group>"; };
+		C92B5E3A1753444100145818 /* MWVuboooConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWVuboooConstants.h; sourceTree = "<group>"; };
+		C92B5E3B1753444100145818 /* MWVuboooConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWVuboooConstants.m; sourceTree = "<group>"; };
 		C92B5E3C1753444100145818 /* MWSimilarUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWSimilarUser.h; sourceTree = "<group>"; };
 		C92B5E3D1753444100145818 /* MWSimilarUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MWSimilarUser.m; sourceTree = "<group>"; };
 		C92B5E3E1753444100145818 /* MWUserDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MWUserDetail.h; sourceTree = "<group>"; };
@@ -414,8 +414,8 @@
 		C92B5E391753444100145818 /* vubooo user */ = {
 			isa = PBXGroup;
 			children = (
-				C92B5E3A1753444100145818 /* MWConstants.h */,
-				C92B5E3B1753444100145818 /* MWConstants.m */,
+				C92B5E3A1753444100145818 /* MWVuboooConstants.h */,
+				C92B5E3B1753444100145818 /* MWVuboooConstants.m */,
 				C92B5E3C1753444100145818 /* MWSimilarUser.h */,
 				C92B5E3D1753444100145818 /* MWSimilarUser.m */,
 				C92B5E3E1753444100145818 /* MWUserDetail.h */,
