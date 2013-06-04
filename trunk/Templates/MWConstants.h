@@ -25,7 +25,8 @@ extern NSInteger const TableTemplateRowHeight;
 typedef enum{
     TemplateControllerTypeTable,
     TemplateControllerTypeSettings,
-    TemplateControllerTypeSpreadLove
+    TemplateControllerTypeSpreadLove,
+    TemplateControllerTypeFacebook
 }TemplateControllerType;
 
 #ifndef Slide_ly_Constants_h

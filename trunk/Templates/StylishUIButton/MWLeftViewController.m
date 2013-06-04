@@ -69,6 +69,26 @@
                                                        withValue:[NSNumber numberWithInt:100]];
 }
 
+- (IBAction)didPressFacebook:(id)sender
+{
+    if(_type != TemplateControllerTypeFacebook)
+    {
+        _type = TemplateControllerTypeFacebook;
+        
+        self.sidePanelController.centerPanel = [[UINavigationController alloc] initWithRootViewController:[[MWFacebookViewController alloc] init]];
+    }
+    else
+    {
+        [self.sidePanelController showCenterPanelAnimated:YES];
+        
+    }
+    
+    [[[GAI sharedInstance] defaultTracker] sendEventWithCategory:@"uiAction"
+                                                      withAction:@"buttonPress"
+                                                       withLabel:@"leftView/facebookBtn"
+                                                       withValue:[NSNumber numberWithInt:100]];
+}
+
 #pragma mark - fin
 
 - (void)viewDidUnload

@@ -52,7 +52,8 @@
     return YES;
 }
 
-- (void)postWithAllowLogin:(BOOL)allowLogin {
+- (void)postWithAllowLogin:(BOOL)allowLogin
+{
     LogEnter();
     
     //name
@@ -60,7 +61,6 @@
         self.name = NSLocalizedString(@"TMSocialPostingText", @"");
     }
     
-    //link
     if (!self.link){
         self.link = @"";
     }
@@ -69,24 +69,19 @@
         self.imageURL = kDefaultImageURL;
         
     }
-    
-    //    if (NSClassFromString(@"SLComposeViewController") && !_shouldPostSilently && [SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook]){
-    //        [self postOnIOS6];
-    //    }
-    //    else{
     [self openSessionWithAllowLoginUI:allowLogin];
-    //    }
-    
-    
 }
 
-- (void)post:(FBSession *)session{
+- (void)post:(FBSession *)session
+{
     NSMutableDictionary *postparams = [[NSMutableDictionary alloc] init];
     [delegate shareWillStart];
     
     if (!self.userMessage) { //TODO: make this normal
         self.userMessage = @"";
-    } else {
+    } else
+    {
+        
         [postparams setObject:self.userMessage forKey:@"description"];
         [postparams setObject:self.link forKey:@"link"];
         
@@ -180,9 +175,10 @@
                                 // @"publish_actions",
                                 nil];
         
-        return [FBSession openActiveSessionWithReadPermissions:permissions allowLoginUI:allowLoginUI completionHandler:^(FBSession *session, FBSessionState state, NSError *error) {
+        return [FBSession openActiveSessionWithReadPermissions:permissions allowLoginUI:allowLoginUI completionHandler:^(FBSession *session, FBSessionState state, NSError *error)
+        {
             [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"basicFacebookPermissionsSet"];
-            [self openSessionWithAllowLoginUI:allowLoginUI];
+            [self postOnIOS6];
         }];
 
     }

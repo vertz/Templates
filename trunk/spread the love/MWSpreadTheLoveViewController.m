@@ -225,7 +225,7 @@
 - (void)shareToFacebook
 {
     MWFacebook *facebook = [[MWFacebook alloc] initWithDelegate:nil];
-    facebook.link = @"http://www.bububu.com";
+    facebook.link = @"http://www.google.com";
     facebook.userMessage = [NSString stringWithFormat:NSLocalizedString(@"share_app_social_networks_text", @"Share App on social networks text"), @""];
     [facebook postWithAllowLogin:YES];
 }

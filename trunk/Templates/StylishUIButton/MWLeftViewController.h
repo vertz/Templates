@@ -22,7 +22,8 @@
 #import "MWAppDelegate.h"
 #import "MWConstants.h"
 
-# import "MWSpreadTheLoveViewController.h"
+#import "MWSpreadTheLoveViewController.h"
+#import "MWFacebookViewController.h"
 
 @interface MWLeftViewController : GAITrackedViewController
 {
@@ -36,6 +37,7 @@
 
 - (IBAction)didPressTableButton:(id)sender;
 - (IBAction)didPressLove:(id)sender;
+- (IBAction)didPressFacebook:(id)sender;
 
 
 @end
