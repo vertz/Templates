@@ -34,7 +34,7 @@
 		<string>armv7</string>
 	</array>
 	<key>FacebookAppID</key>
-	<string>516440071726398</string>
+	<string>315538691821181</string>
 	<key>UIStatusBarHidden</key>
 	<true/>
 	<key>CFBundleURLTypes</key>
@@ -42,7 +42,7 @@
 		<dict>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>fb516440071726398</string>
+				<string>fb315538691821181</string>
 			</array>
 			<key>CFBundleURLName</key>
 			<string></string>
